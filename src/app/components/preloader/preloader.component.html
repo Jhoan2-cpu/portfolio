@@ -1,11 +1,16 @@
 <div 
-  *ngIf="isLoading" 
-  class="fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-500"
-  [class.opacity-0]="!isLoading"
-  [class.pointer-events-none]="!isLoading">
+  *ngIf="isVisible"
+  [style.opacity]="isLoading ? '1' : '0'"
+  [style.transform]="isLoading ? 'scale(1)' : 'scale(1.1)'"
+  style="transition: opacity 1s ease-out, transform 1s ease-out;"
+  class="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
   
   <!-- Loader Container -->
-  <div class="text-center space-y-8">
+  <div 
+    class="text-center space-y-8"
+    [style.opacity]="isLoading ? '1' : '0'"
+    [style.transform]="isLoading ? 'scale(1)' : 'scale(0.75)'"
+    style="transition: opacity 1s ease-out, transform 1s ease-out;">
     
     <!-- Logo Animado -->
     <div class="relative">
