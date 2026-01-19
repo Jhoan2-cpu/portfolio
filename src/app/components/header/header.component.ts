@@ -16,4 +16,19 @@ export class HeaderComponent {
     { label: 'PORTFOLIO', href: '#portfolio', active: true },
     { label: 'PAGES', href: '#pages', active: false }
   ];
+
+  socialLinks = [
+    { name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/yourusername' },
+    { name: 'LinkedIn', icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
+    { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' }
+  ];
+
+  downloadCV(): void {
+    // Aquí puedes poner la ruta real de tu CV
+    const cvUrl = '/assets/cv/Jhoan_Cruz_CV.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Jhoan_Cruz_CV.pdf';
+    link.click();
+  }
 }

@@ -21,6 +21,12 @@ export class HeroComponent {
     }
   };
 
+  contactInfo = {
+    email: 'jhoan.cruz@example.com',
+    phone: '+1 (555) 123-4567',
+    location: 'Lima, Perú'
+  };
+
   technologies = [
     { name: 'Angular', icon: 'fab fa-angular' },
     { name: 'React', icon: 'fab fa-react' },
@@ -29,6 +35,17 @@ export class HeroComponent {
     { name: 'Python', icon: 'fab fa-python' },
     { name: 'Docker', icon: 'fab fa-docker' }
   ];
+
+  emailCopied = false;
+
+  copyEmail(): void {
+    navigator.clipboard.writeText(this.contactInfo.email).then(() => {
+      this.emailCopied = true;
+      setTimeout(() => {
+        this.emailCopied = false;
+      }, 2000);
+    });
+  }
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
