@@ -3,8 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { EducationComponent } from './components/education/education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { VideoSectionComponent } from './components/video-section/video-section.component';
-import { PreloaderComponent } from './components/preloader/preloader.component';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +15,10 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
     HeaderComponent,
     HeroComponent,
     AboutComponent,
-    VideoSectionComponent,
-    PreloaderComponent
+    SkillsComponent,
+    EducationComponent,
+    ProjectsComponent,
+    VideoSectionComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

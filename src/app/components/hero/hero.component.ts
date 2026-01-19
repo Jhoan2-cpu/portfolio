@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 export class HeroComponent {
   heroData = {
     title: {
-      highlight: 'IMAGINATION',
-      lines: ['IS MORE', 'IMPORTANT THAN', 'KNOWLEDGE']
+      highlight: 'JHOAN ANTONI',
+      lines: ['CRUZ CASTILLO']
     },
-    quote: 'Together we the people achieve more than any single person could ever do alone.',
+    quote: '"Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions."',
     ctaButton: {
       text: 'GETTING STARTED',
       icon: 'fas fa-arrow-right'
