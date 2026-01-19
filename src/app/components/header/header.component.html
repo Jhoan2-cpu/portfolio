@@ -1,11 +1,8 @@
-<header class="fixed p-4  inset-x-0 z-50 bg-black border border-gray-900 rounded-lg">
-    <div class="border-2 border-white m-0">
-        Content
-    </div>
-  <nav class="max-w-7xl mx-auto px-6 lg:px-8 border-2">
+<header class="fixed p-4 inset-x-0 z-50 bg-black border border-gray-900 rounded-lg animate-slideDown">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
-      <div class="flex items-center gap-2 cursor-pointer">
+      <div class="flex items-center gap-2 cursor-pointer animate-fadeIn" style="animation-delay: 0.2s; animation-fill-mode: both;">
         <div class="w-11 h-11 bg-emerald-500 rounded-full flex items-center justify-center">
           <span class="text-white font-bold text-xl">G</span>
         </div>
@@ -13,7 +10,7 @@
       </div>
 
       <!-- Navigation -->
-      <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider">
+      <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider animate-fadeIn" style="animation-delay: 0.4s; animation-fill-mode: both;">
         <li *ngFor="let item of navItems">
           <a 
             [href]="item.href" 
@@ -26,7 +23,7 @@
       </ul>
 
       <!-- Search & Menu -->
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-6 animate-fadeIn" style="animation-delay: 0.6s; animation-fill-mode: both;">
         <button class="text-emerald-500 flex items-center gap-2 hover:text-emerald-400 transition-colors text-sm">
           <i class="fas fa-search"></i>
           <span class="hidden lg:inline font-medium">Search</span>
