@@ -14,7 +14,7 @@ export class HeroComponent {
       highlight: 'JHOAN ANTONI',
       lines: ['CRUZ CASTILLO']
     },
-    quote: '"Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions." "Transforming ideas into innovative digital solutions."',
+    quote: 'Hola, soy Jhoan Antoni Cruz Castillo. Soy un Desarrollador Full Stack especializado en construir aplicaciones web escalables y eficientes.',
     ctaButton: {
       text: 'GETTING STARTED',
       icon: 'fas fa-arrow-right'
