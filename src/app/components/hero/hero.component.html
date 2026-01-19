@@ -10,27 +10,27 @@
       <div class="space-y-10 relative z-10">
         <!-- Main Heading -->
         <h1 class="leading-tight">
-          <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-emerald-500 mb-2 animate-slideUp" style="animation-delay: 0.3s; animation-fill-mode: both;">
+          <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-emerald-500 mb-2 animate-slideUp" style="animation-delay: 2.6s; animation-fill-mode: both;">
             {{ heroData.title.highlight }}
           </span>
           <span 
             *ngFor="let line of heroData.title.lines; let i = index"
             class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white animate-slideUp"
-            [style.animation-delay]="(0.5 + (i * 0.15)) + 's'"
+            [style.animation-delay]="(2.7 + (i * 0.1)) + 's'"
             style="animation-fill-mode: both;">
             {{ line }}
           </span>
         </h1>
 
         <!-- Quote -->
-        <div class="border-l-4 border-emerald-500 pl-6 py-2 animate-fadeIn" style="animation-delay: 1.2s; animation-fill-mode: both;">
+        <div class="border-l-4 border-emerald-500 pl-6 py-2 animate-fadeIn" style="animation-delay: 3.1s; animation-fill-mode: both;">
           <p class="text-gray-400 text-base lg:text-lg font-light leading-relaxed">
             {{ heroData.quote }}
           </p>
         </div>
 
         <!-- CTA Button -->
-        <div class="pt-4 animate-slideUp" style="animation-delay: 1.4s; animation-fill-mode: both;">
+        <div class="pt-4 animate-slideUp" style="animation-delay: 3.2s; animation-fill-mode: both;">
           <button 
             (click)="onCtaClick()"
             class="group bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm tracking-wider px-10 py-5 flex items-center gap-4 transition-all duration-300 hover:gap-6 shadow-lg hover:shadow-emerald-500/50">
@@ -42,7 +42,7 @@
 
       <!-- Right Content - Image -->
       <div class="relative z-10 flex justify-center lg:justify-end">
-        <div class="relative w-full max-w-lg animate-fadeIn" style="animation-delay: 0.8s; animation-fill-mode: both;">
+        <div class="relative w-full max-w-lg animate-fadeIn" style="animation-delay: 2.8s; animation-fill-mode: both;">
           <!-- Main Image -->
           <div class="relative rounded-xl overflow-hidden shadow-2xl">
             <img 
