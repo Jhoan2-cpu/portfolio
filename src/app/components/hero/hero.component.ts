@@ -28,12 +28,12 @@ export class HeroComponent {
   };
 
   technologies = [
-    { name: 'Angular', icon: 'fab fa-angular' },
+    { name: 'PHP', icon: 'fab fa-php' },
+    { name: 'Laravel', icon: 'fab fa-laravel' },
     { name: 'React', icon: 'fab fa-react' },
     { name: 'Node.js', icon: 'fab fa-node-js' },
-    { name: 'TypeScript', icon: 'fab fa-js' },
-    { name: 'Python', icon: 'fab fa-python' },
-    { name: 'Docker', icon: 'fab fa-docker' }
+    { name: 'TypeScript', icon: 'fas fa-code' },
+    { name: 'SQL Server', icon: 'fas fa-database' }
   ];
 
   emailCopied = false;

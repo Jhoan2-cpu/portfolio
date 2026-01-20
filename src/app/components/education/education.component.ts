@@ -28,14 +28,14 @@ interface Certification {
 export class EducationComponent {
   education: Education[] = [
     {
-      degree: 'Bachelor of Computer Science',
-      institution: 'University of Technology',
-      period: '2018 - 2022',
-      description: 'Specialized in Software Engineering and Web Development',
+      degree: 'Egresado en Ingeniería de Sistemas e Informática',
+      institution: 'Universidad Nacional del Santa',
+      period: '2021 - 2026',
+      description: 'Especializado en Desarrollo Web y Análisis de Datos',
       achievements: [
-        'Graduated with Honors - GPA 3.8/4.0',
-        'Dean\'s List for 6 consecutive semesters',
-        'Led development team for senior capstone project'
+        'Alto Rendimiento Académico (Perteneciente al Quinto Superior).',
+        'Miembro de Semilleros de Investigación.',
+        'Experiencia liderando equipos de desarrollo en proyectos universitarios.'
       ],
       icon: 'fas fa-graduation-cap'
     },
