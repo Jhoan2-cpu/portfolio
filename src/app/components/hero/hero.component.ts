@@ -16,8 +16,8 @@ export class HeroComponent {
     },
     quote: 'Hola, soy Jhoan Antoni Cruz Castillo. Soy un Desarrollador Full Stack especializado en construir aplicaciones web escalables y eficientes.',
     image: {
-      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&q=80',
-      alt: 'Professional Portrait'
+      src: '/perfil/perfil.jpg',
+      alt: 'Jhoan Antoni Cruz Castillo'
     }
   };
 

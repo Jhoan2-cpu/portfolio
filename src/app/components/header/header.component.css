@@ -1,1 +1,32 @@
 /* Component specific styles */
+
+/* Animated underline effect */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #10b981; /* emerald-500 */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #10b981 !important; /* emerald-500 */
+}
+
+.nav-link.active::after {
+  width: 100%;
+}

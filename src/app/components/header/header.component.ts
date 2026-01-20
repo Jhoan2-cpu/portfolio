@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   navItems = [
     { label: 'HOME', href: '#home', active: false },
-    { label: 'ABOUT', href: '#about', active: false },
-    { label: 'SERVICE', href: '#service', active: false },
-    { label: 'PORTFOLIO', href: '#portfolio', active: true },
-    { label: 'PAGES', href: '#pages', active: false }
+    { label: 'EDUCATION', href: '#education', active: false },
+    { label: 'SOFT SKILLS', href: '#soft-skills', active: false },
+    { label: 'PROJECTS', href: '#projects', active: false },
+    { label: 'VIDEO', href: '#video', active: false }
   ];
 
   socialLinks = [
@@ -22,6 +22,37 @@ export class HeaderComponent {
     { name: 'LinkedIn', icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
     { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' }
   ];
+
+  scrollToSection(sectionId: string, event: Event): void {
+    event.preventDefault();
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const scrollPosition = window.scrollY + 150; // Offset para activar antes
+
+    this.navItems.forEach(item => {
+      const section = document.querySelector(item.href);
+      if (section) {
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          this.setActiveItem(item.href);
+        }
+      }
+    });
+  }
+
+  private setActiveItem(href: string): void {
+    this.navItems.forEach(item => {
+      item.active = item.href === href;
+    });
+  }
 
   downloadCV(): void {
     // Aquí puedes poner la ruta real de tu CV

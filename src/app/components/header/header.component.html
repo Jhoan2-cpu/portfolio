@@ -13,10 +13,9 @@
       <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider animate-fadeIn" style="animation-delay: 0.1s;">
         <li *ngFor="let item of navItems">
           <a 
-            [href]="item.href" 
-            [class]="item.active 
-              ? 'text-emerald-500 pb-6 border-b-2 border-emerald-500' 
-              : 'text-gray-400 hover:text-emerald-500 transition-colors'">
+            [href]="item.href"
+            (click)="scrollToSection(item.href, $event)"
+            [class]="'nav-link text-gray-400 hover:text-emerald-500 transition-colors ' + (item.active ? 'active' : '')">
             {{ item.label }}
           </a>
         </li>
