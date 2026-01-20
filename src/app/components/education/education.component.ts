@@ -38,48 +38,33 @@ export class EducationComponent {
         'Experiencia liderando equipos de desarrollo en proyectos universitarios.'
       ],
       icon: 'fas fa-graduation-cap'
-    },
-    {
-      degree: 'Full Stack Web Development',
-      institution: 'Tech Academy Bootcamp',
-      period: '2022',
-      description: 'Intensive program focused on modern web technologies',
-      achievements: [
-        'Built 15+ full-stack projects',
-        'Specialized in MEAN/MERN stack',
-        'Mentored junior students'
-      ],
-      icon: 'fas fa-code'
     }
   ];
 
   certifications: Certification[] = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      credential: 'AWS-SA-2023-12345',
-      icon: 'fab fa-aws'
+      name: 'Angular 17 Overview & Basics',
+      issuer: 'LearnWuest',
+      date: '2026',
+      icon: 'fab fa-angular'
     },
     {
-      name: 'Google Professional Cloud Developer',
-      issuer: 'Google Cloud',
-      date: '2023',
-      credential: 'GCP-CD-2023-67890',
-      icon: 'fab fa-google'
+      name: 'Scrum Fundamentals Certified',
+      issuer: 'SCRUM Study',
+      date: '2024',
+      icon: 'fas fa-tasks'
     },
     {
-      name: 'Microsoft Certified: Azure Developer',
+      name: 'SQL Foundations',
       issuer: 'Microsoft',
-      date: '2022',
-      credential: 'MS-AZ-2022-54321',
-      icon: 'fab fa-microsoft'
+      date: '2026',
+      icon: 'fas fa-database'
     },
     {
-      name: 'Meta Front-End Developer',
-      issuer: 'Meta (Facebook)',
-      date: '2022',
-      icon: 'fab fa-meta'
+      name: 'Data Analysis and Visualization with Python',
+      issuer: 'Microsoft',
+      date: '2026',
+      icon: 'fab fa-python'
     }
   ];
 }
