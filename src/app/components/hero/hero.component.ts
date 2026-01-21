@@ -22,9 +22,13 @@ export class HeroComponent {
   };
 
   contactInfo = {
-    email: 'jhoan.cruz@example.com',
+    email: 'jhoan320cruz@gmail.com',
     phone: '+1 (555) 123-4567',
-    location: 'Lima, Perú'
+    location: 'Lima, Perú',
+    socialLinks: [
+      { name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/Jhoan2-cpu' },
+      { name: 'LinkedIn', icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/jhoan-antoni-cruz-castillo-3357251b4/' }
+    ]
   };
 
   technologies = [

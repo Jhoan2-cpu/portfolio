@@ -53,18 +53,18 @@ export class ProjectsComponent {
       },
       featured: false
     },
-    {
-      id: 5,
-      title: 'Weather Forecast API',
-      category: 'API',
-      description: 'RESTful API providing accurate weather data with location-based forecasting and historical weather analytics.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
-      technologies: ['Node.js', 'Express', 'MongoDB', 'Docker'],
-      links: {
-        github: 'https://github.com/username/project'
-      },
-      featured: true
-    }
+    // {
+    //   id: 5,
+    //   title: 'Weather Forecast API',
+    //   category: 'API',
+    //   description: 'RESTful API providing accurate weather data with location-based forecasting and historical weather analytics.',
+    //   image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
+    //   technologies: ['Node.js', 'Express', 'MongoDB', 'Docker'],
+    //   links: {
+    //     github: 'https://github.com/username/project'
+    //   },
+    //   featured: true
+    // }
   ];
 
   get filteredProjects(): Project[] {
