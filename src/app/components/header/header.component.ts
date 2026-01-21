@@ -14,13 +14,13 @@ export class HeaderComponent {
     { label: 'EDUCATION', href: '#education', active: false },
     { label: 'SOFT SKILLS', href: '#soft-skills', active: false },
     { label: 'PROJECTS', href: '#projects', active: false },
-    { label: 'VIDEO', href: '#video', active: false }
+    // { label: 'VIDEO', href: '#video', active: false }
   ];
 
   socialLinks = [
-    { name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/yourusername' },
-    { name: 'LinkedIn', icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
-    { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' }
+    { name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/Jhoan2-cpu' },
+    { name: 'LinkedIn', icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/jhoan-antoni-cruz-castillo-3357251b4/' }
+    // { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' }
   ];
 
   scrollToSection(sectionId: string, event: Event): void {

@@ -33,7 +33,7 @@ export class EducationComponent {
       period: '2021 - 2026',
       description: 'Especializado en Desarrollo Web y Análisis de Datos',
       achievements: [
-        'Alto Rendimiento Académico (Perteneciente al Quinto Superior).',
+        'Alto Rendimiento Académico (Quinto Superior).',
         'Miembro de Semilleros de Investigación.',
         'Experiencia liderando equipos de desarrollo en proyectos universitarios.'
       ],
