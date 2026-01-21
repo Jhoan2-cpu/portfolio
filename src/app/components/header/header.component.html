@@ -1,38 +1,51 @@
-<header class="fixed p-4  inset-x-0 z-50 bg-black border border-gray-900 rounded-lg">
-    <div class="border-2 border-white m-0">
-        Content
-    </div>
-  <nav class="max-w-7xl mx-auto px-6 lg:px-8 border-2">
+<header class="fixed p-4 inset-x-0 z-50 bg-black border border-gray-900 rounded-lg animate-slideDown">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
-      <div class="flex items-center gap-2 cursor-pointer">
+      <div class="flex items-center gap-2 cursor-pointer animate-fadeIn" style="animation-delay: 0s;">
         <div class="w-11 h-11 bg-emerald-500 rounded-full flex items-center justify-center">
-          <span class="text-white font-bold text-xl">G</span>
+          <span class="text-white font-bold text-xl">D</span>
         </div>
-        <span class="text-white font-bold text-2xl tracking-tight">GLINT</span>
+        <span class="text-white font-bold text-2xl tracking-tight">DEVELOPER</span>
       </div>
 
       <!-- Navigation -->
-      <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider">
+      <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider animate-fadeIn" style="animation-delay: 0.1s;">
         <li *ngFor="let item of navItems">
           <a 
-            [href]="item.href" 
-            [class]="item.active 
-              ? 'text-emerald-500 pb-6 border-b-2 border-emerald-500' 
-              : 'text-gray-400 hover:text-emerald-500 transition-colors'">
+            [href]="item.href"
+            (click)="scrollToSection(item.href, $event)"
+            [class]="'nav-link text-gray-400 hover:text-emerald-500 transition-colors ' + (item.active ? 'active' : '')">
             {{ item.label }}
           </a>
         </li>
       </ul>
 
-      <!-- Search & Menu -->
-      <div class="flex items-center gap-6">
-        <button class="text-emerald-500 flex items-center gap-2 hover:text-emerald-400 transition-colors text-sm">
-          <i class="fas fa-search"></i>
-          <span class="hidden lg:inline font-medium">Search</span>
+      <!-- Social Links & Download CV -->
+      <div class="flex items-center gap-4 animate-fadeIn" style="animation-delay: 0.2s;">
+        <!-- Social Icons -->
+        <!-- <div class="hidden lg:flex items-center gap-3 mr-2">
+          <a 
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            target="_blank"
+            [attr.aria-label]="social.name"
+            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-emerald-500 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+            <i [class]="social.icon + ' text-lg'"></i>
+          </a>
+        </div> -->
+
+        <!-- Download CV Button -->
+        <button 
+          (click)="downloadCV()"
+          class="bg-emerald-500 hover:bg-emerald-600 text-white hover:cursor-pointer flex items-center gap-2 transition-all duration-300 text-sm font-bold px-5 py-3  shadow-lg hover:shadow-emerald-500/50">
+          <i class="fas fa-download"></i>
+          <span class="hidden lg:inline">Download CV</span>
         </button>
-        <button class="text-emerald-500 hover:text-emerald-400 transition-colors">
-          <i class="fas fa-th text-xl"></i>
+        
+        <!-- Menu Button -->
+        <button class="text-emerald-500 hover:text-emerald-400 transition-colors lg:hidden">
+          <i class="fas fa-bars text-xl"></i>
         </button>
       </div>
     </div>

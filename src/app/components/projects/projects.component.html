@@ -1,0 +1,121 @@
+<section class="relative min-h-screen bg-zinc-950 py-32">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-[0.02] pointer-events-none overflow-hidden">
+    <div class="absolute top-32 right-10 text-[300px] font-black text-white leading-none">P</div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-fadeIn" style="animation-delay: 0.1s;">
+      <h2 class="text-5xl lg:text-6xl font-black text-white mb-4">
+        Proyectos <span class="text-emerald-500">Destacados</span>
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Una muestra de mis proyectos recientes.
+      </p>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="flex justify-center mb-16 animate-fadeIn" style="animation-delay: 0.2s;">
+      <div class="inline-flex flex-wrap gap-4 bg-black border border-gray-800 p-2 rounded-lg">
+        <button 
+          *ngFor="let category of categories"
+          (click)="selectCategory(category)"
+          [class]="selectedCategory === category 
+            ? 'bg-emerald-500 text-white' 
+            : 'bg-transparent text-gray-400 hover:text-white'"
+          class="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300">
+          {{ category }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div 
+        *ngFor="let project of filteredProjects; let i = index"
+        class="group relative bg-black border border-gray-800 hover:border-emerald-500 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/20 animate-slideUp"
+        [style.animation-delay]="(0.3 + (i * 0.1)) + 's'">
+        
+        <!-- Project Image -->
+        <div class="relative h-64 overflow-hidden">
+          <img 
+            [src]="project.image" 
+            [alt]="project.title"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          
+          <!-- Category Badge -->
+          <div class="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            {{ project.category }}
+          </div>
+
+          <!-- Featured Badge -->
+          <div *ngIf="project.featured" class="absolute top-4 left-4 bg-white text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <i class="fas fa-star"></i>
+            Featured
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="p-6">
+          <!-- Title -->
+          <h3 class="text-white font-bold text-xl mb-3 group-hover:text-emerald-500 transition-colors">
+            {{ project.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+            {{ project.description }}
+          </p>
+
+          <!-- Technologies -->
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span 
+              *ngFor="let tech of project.technologies"
+              class="text-xs bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full font-medium">
+              {{ tech }}
+            </span>
+          </div>
+
+          <!-- Links -->
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-800">
+            <a 
+              *ngIf="project.links.live"
+              [href]="project.links.live"
+              target="_blank"
+              class="flex items-center gap-2 text-emerald-500 hover:text-emerald-400 font-semibold text-sm transition-colors">
+              <i class="fas fa-external-link-alt"></i>
+              <span>Live Demo</span>
+            </a>
+            <a 
+              *ngIf="project.links.github"
+              [href]="project.links.github"
+              target="_blank"
+              class="flex items-center gap-2 text-gray-400 hover:text-white font-semibold text-sm transition-colors">
+              <i class="fab fa-github"></i>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hover Effect Border -->
+        <div class="absolute inset-0 border-2 border-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+      </div>
+    </div>
+
+    <!-- View More CTA -->
+    <div class="text-center mt-16 animate-fadeIn" style="animation-delay: 0.5s;">
+      <a 
+        href="https://github.com/Jhoan2-cpu" 
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-transparent border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white font-bold text-sm tracking-wider px-10 py-5 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/50">
+        <i class="fab fa-github text-lg"></i>
+        <span>VIEW ALL PROJECTS ON GITHUB</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>

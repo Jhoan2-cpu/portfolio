@@ -1,0 +1,51 @@
+<div 
+  *ngIf="isVisible"
+  [style.opacity]="isLoading ? '1' : '0'"
+  [style.transform]="isLoading ? 'scale(1)' : 'scale(1.1)'"
+  style="transition: opacity .5s ease-out, transform .5s ease-out;"
+  class="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
+  
+  <!-- Loader Container -->
+  <div 
+    class="text-center space-y-8"
+    [style.opacity]="isLoading ? '1' : '0'"
+    [style.transform]="isLoading ? 'scale(1)' : 'scale(0.75)'"
+    style="transition: opacity .5s ease-out, transform .5s ease-out;">
+    
+    <!-- Logo Animado -->
+    <div class="relative">
+      <!-- Círculo pulsante de fondo -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-32 h-32 bg-emerald-500/20 rounded-full animate-ping"></div>
+      </div>
+      
+      <!-- Logo principal -->
+      <div class="relative w-32 h-32 mx-auto bg-emerald-500 rounded-full flex items-center justify-center animate-bounce shadow-2xl shadow-emerald-500/50">
+        <span class="text-white font-black text-6xl">G</span>
+      </div>
+    </div>
+
+    <!-- Texto de carga -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-white tracking-wider animate-pulse">
+        GLINT
+      </h2>
+      
+      <!-- Barra de progreso -->
+      <div class="w-64 h-1 bg-gray-800 rounded-full overflow-hidden mx-auto">
+        <div class="h-full bg-emerald-500 rounded-full animate-[loading_2s_ease-in-out_infinite]"></div>
+      </div>
+      
+      <p class="text-gray-400 text-sm animate-pulse">
+        Loading your experience...
+      </p>
+    </div>
+
+    <!-- Spinner giratorio adicional -->
+    <div class="flex justify-center gap-2">
+      <div class="w-3 h-3 bg-emerald-500 rounded-full animate-[bounce_1s_infinite_0ms]"></div>
+      <div class="w-3 h-3 bg-emerald-500 rounded-full animate-[bounce_1s_infinite_200ms]"></div>
+      <div class="w-3 h-3 bg-emerald-500 rounded-full animate-[bounce_1s_infinite_400ms]"></div>
+    </div>
+  </div>
+</div>

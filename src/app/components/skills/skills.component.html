@@ -1,0 +1,76 @@
+<section class="relative min-h-screen bg-zinc-950 py-32">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-[0.02] pointer-events-none overflow-hidden">
+    <div class="absolute top-32 right-10 text-[300px] font-black text-white leading-none">S</div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-20 animate-fadeIn" style="animation-delay: 0.1s;">
+      <h2 class="text-5xl lg:text-6xl font-black text-white mb-4">
+        My <span class="text-emerald-500">Skills</span>
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Technologies and tools I work with to bring ideas to life
+      </p>
+    </div>
+
+    <!-- Skills Grid by Category -->
+    <div class="space-y-16">
+      <div 
+        *ngFor="let category of categories; let i = index" 
+        class="animate-slideUp"
+        [style.animation-delay]="(0.2 + (i * 0.1)) + 's'">
+        
+        <!-- Category Title -->
+        <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+          <span class="w-12 h-1 bg-emerald-500"></span>
+          {{ category }}
+        </h3>
+
+        <!-- Skills Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div 
+            *ngFor="let skill of getSkillsByCategory(category)"
+            class="group bg-black border border-gray-800 hover:border-emerald-500 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-emerald-500/10">
+            
+            <!-- Icon & Name -->
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-emerald-500/10 group-hover:bg-emerald-500/20 rounded-lg flex items-center justify-center transition-colors">
+                <i [class]="skill.icon + ' text-emerald-500 text-2xl'"></i>
+              </div>
+              <h4 class="text-white font-semibold text-lg">{{ skill.name }}</h4>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm">
+                <span class="text-gray-400">Proficiency</span>
+                <span class="text-emerald-500 font-semibold">{{ skill.level }}%</span>
+              </div>
+              <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div 
+                  class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 transition-all duration-1000 ease-out rounded-full"
+                  [style.width]="skill.level + '%'">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-20 animate-fadeIn" style="animation-delay: 0.6s;">
+      <p class="text-gray-400 text-lg mb-6">
+        Want to see these skills in action?
+      </p>
+      <a 
+        href="#projects" 
+        class="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm tracking-wider px-10 py-5 transition-all duration-300 hover:gap-5 shadow-lg hover:shadow-emerald-500/50">
+        <span>VIEW MY PROJECTS</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
