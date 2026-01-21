@@ -46,13 +46,36 @@ body {
 }
 
 .animate-fadeIn {
+  opacity: 0;
   animation: fadeInAnim 1s ease-out forwards;
 }
 
 .animate-slideUp {
+  opacity: 0;
   animation: slideUpAnim 0.8s ease-out forwards;
 }
 
 .animate-slideDown {
+  opacity: 0;
   animation: slideDownAnim 0.8s ease-out forwards;
+}
+
+/* Sections initially hidden */
+section {
+  opacity: 0;
+}
+
+section.visible {
+  animation: fadeInSection 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
