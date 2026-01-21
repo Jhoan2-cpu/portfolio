@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   navItems = [
-    { label: 'HOME', href: '#home', active: false },
-    { label: 'EDUCATION', href: '#education', active: false },
-    { label: 'SOFT SKILLS', href: '#soft-skills', active: false },
-    { label: 'PROJECTS', href: '#projects', active: false },
+    { label: 'INICIO', href: '#home', active: false },
+    { label: 'EDUCACIÓN', href: '#education', active: false },
+    { label: 'HABILIDADES BLANDAS', href: '#soft-skills', active: false },
+    { label: 'PROYECTOS', href: '#projects', active: false },
     // { label: 'VIDEO', href: '#video', active: false }
   ];
 
