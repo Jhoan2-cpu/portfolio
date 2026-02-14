@@ -40,7 +40,7 @@ export class HeaderComponent {
       if (section) {
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = (section as HTMLElement).offsetHeight;
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           this.setActiveItem(item.href);
         }

@@ -24,7 +24,7 @@ interface Project {
 })
 export class ProjectsComponent {
   selectedCategory: string = 'All';
-  
+
   categories: string[] = ['All', 'Web App', 'Mobile', 'UI/UX', 'API'];
 
   projects: Project[] = [
@@ -33,7 +33,7 @@ export class ProjectsComponent {
       title: 'Hire Link',
       category: 'Mobile',
       description: 'Una aplicación móvil que conecta a empleadores con candidatos.',
-      image: '/projects/mobile.png',
+      image: '/projects/mobile.webp',
       technologies: ['Kotlin', 'Firebase', 'Google Maps API', 'Material-UI'],
       links: {
         github: 'https://github.com/Jhoan2-cpu/hirelink-2025_project'
@@ -45,7 +45,7 @@ export class ProjectsComponent {
       title: 'TrinUp',
       category: 'Web App',
       description: 'Plataforma de marketing digital que conecta marcas con su público objetivo ideal.',
-      image: '/projects/web_trinup.png',
+      image: '/projects/web_trinup.webp',
       technologies: ['Astro', 'Tailwind', 'TypeScript'],
       links: {
         github: 'https://github.com/Jhoan2-cpu/trinup-frontend',
@@ -53,18 +53,19 @@ export class ProjectsComponent {
       },
       featured: false
     },
-    // {
-    //   id: 5,
-    //   title: 'Weather Forecast API',
-    //   category: 'API',
-    //   description: 'RESTful API providing accurate weather data with location-based forecasting and historical weather analytics.',
-    //   image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
-    //   technologies: ['Node.js', 'Express', 'MongoDB', 'Docker'],
-    //   links: {
-    //     github: 'https://github.com/username/project'
-    //   },
-    //   featured: true
-    // }
+    {
+      id: 5,
+      title: 'Inventory System',
+      category: 'Web App',
+      description: 'Sistema de inventario para gestionar productos y pedidos.',
+      image: '/projects/web_inventory.webp',
+      technologies: ['Cloud', 'Docker', 'NestJS', 'PostgreSQL', 'TypeScript', 'Angular'],
+      links: {
+        github: 'https://github.com/Jhoan2-cpu/frontend-insaaty',
+        live: 'https://inventory.jhoan-cruz.com/'
+      },
+      featured: false
+    }
   ];
 
   get filteredProjects(): Project[] {

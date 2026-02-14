@@ -31,6 +31,13 @@ export class HomeComponent implements OnInit {
   @HostListener('window:scroll', [])
   onScroll(): void {
     this.checkSections();
+    this.showScrollButton = window.scrollY > 300;
+  }
+
+  showScrollButton = false;
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   private checkSections(): void {
@@ -39,7 +46,7 @@ export class HomeComponent implements OnInit {
 
     sections.forEach(section => {
       const sectionTop = section.getBoundingClientRect().top;
-      
+
       if (sectionTop < triggerHeight) {
         section.classList.add('visible');
       }

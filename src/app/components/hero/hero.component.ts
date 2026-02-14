@@ -50,8 +50,4 @@ export class HeroComponent {
       }, 2000);
     });
   }
-
-  scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 }

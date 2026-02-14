@@ -15,4 +15,12 @@
   <!-- <div id="video">
     <app-video-section />
   </div> -->
+
+  <!-- Scroll to Top Button -->
+  <button (click)="scrollToTop()" [class.opacity-100]="showScrollButton" [class.opacity-0]="!showScrollButton"
+    [class.pointer-events-none]="!showScrollButton"
+    class="fixed bottom-10 right-10 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 hover:-translate-y-1 z-50 rounded-full opacity-0"
+    aria-label="Scroll to top">
+    <i class="fas fa-arrow-up text-lg"></i>
+  </button>
 </div>

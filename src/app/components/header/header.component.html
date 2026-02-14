@@ -10,11 +10,10 @@
       </div>
 
       <!-- Navigation -->
-      <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider animate-fadeIn" style="animation-delay: 0.1s;">
+      <ul class="hidden md:flex items-center gap-10 text-sm font-semibold tracking-wider animate-fadeIn"
+        style="animation-delay: 0.1s;">
         <li *ngFor="let item of navItems">
-          <a 
-            [href]="item.href"
-            (click)="scrollToSection(item.href, $event)"
+          <a [href]="item.href" (click)="scrollToSection(item.href, $event)"
             [class]="'nav-link text-gray-400 hover:text-emerald-500 transition-colors ' + (item.active ? 'active' : '')">
             {{ item.label }}
           </a>
@@ -36,13 +35,12 @@
         </div> -->
 
         <!-- Download CV Button -->
-        <!-- <button 
-          (click)="downloadCV()"
+        <button (click)="downloadCV()"
           class="bg-emerald-500 hover:bg-emerald-600 text-white hover:cursor-pointer flex items-center gap-2 transition-all duration-300 text-sm font-bold px-5 py-3  shadow-lg hover:shadow-emerald-500/50">
           <i class="fas fa-download"></i>
           <span class="hidden lg:inline">Download CV</span>
-        </button> -->
-        
+        </button>
+
         <!-- Menu Button -->
         <button class="text-emerald-500 hover:text-emerald-400 transition-colors lg:hidden">
           <i class="fas fa-bars text-xl"></i>
